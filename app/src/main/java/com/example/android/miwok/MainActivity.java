@@ -15,11 +15,13 @@
  */
 package com.example.android.miwok;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.TextView;
+
+import com.example.android.miwok.fragments.SampleFragmentPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
     TextView mColorsText = null;
@@ -30,8 +32,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        // Set the content of the activity to use the activity_main.xml layout file
+        // Get the ViewPager and set it's PagerAdapter so that it can display items
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setAdapter(new SampleFragmentPagerAdapter(getSupportFragmentManager()));
+
+        // Give the TabLayout the ViewPager
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        tabLayout.setupWithViewPager(viewPager);
+
+       /* // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
         //get the TextViews ...
@@ -67,11 +78,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActive(PhrasesActivity.class);
             }
-        });
+        });*/
     }
-
+/*
     public void startActive(Class<?> activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
-    }
+    }*/
 }
