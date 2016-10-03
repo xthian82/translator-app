@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.miwok.model;
 
 import android.app.Activity;
 import android.support.v4.content.ContextCompat;
@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.android.miwok.R;
 
 import java.util.ArrayList;
 

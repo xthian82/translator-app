@@ -27,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
     TextView mNumbersText = null;
     TextView mPhrasesText = null;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

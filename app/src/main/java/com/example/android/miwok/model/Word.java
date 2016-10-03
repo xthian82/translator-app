@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.miwok.model;
 
 /**
  * Created by Casa on 29/09/2016.
